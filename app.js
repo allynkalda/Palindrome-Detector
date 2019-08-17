@@ -1,28 +1,15 @@
 checkPalindrome("ollo");
 
-
-
-
 function checkPalindrome(str) {
 
-var first = "";
-var reverse = [];
+let newString = string.replace(/[^A-Za-z0-9]/g, '').toLowerCase()
+let reverseString = newString.split("").reverse().join("");
 
-for (var i = 0; i < str.length; i++) {
-
-	first += str[i];
-
-	reverse.unshift(str.charAt(i));
-
-	var second = reverse.join("");
-
-}
-
-if (first === second) {
-	console.log(first + " is a palindrome!")
+if (newString == reverseString) {
+	return true
 } else {
-	console.log(first + " and " + second + " is not a palindrome." )
+	return false
 }
 
-
 }
+
